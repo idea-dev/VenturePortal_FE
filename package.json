@@ -17,7 +17,10 @@
     "react-google-calendar-api": "^1.0.11",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
-    "recharts": "^2.0.0-beta.1"
+    "recharts": "^2.0.0-beta.1",
+    "@auth0/auth0-spa-js": "latest",
+    "prop-types": "latest",
+    "history": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

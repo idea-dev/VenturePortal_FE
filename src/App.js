@@ -50,16 +50,11 @@ const presets = {
 function App() {
     const {loading} = useAuth0();
     const {isAuthenticated} = useAuth0();
-    const [preset, setPreset] = useState("createStandardLayout");
-    const [navSelect, setSelected] = useState(0);
-
-    function updateSelected(i) {
-        setSelected(i);
-    }
+    const [preset] = useState("createStandardLayout");
 
     if (loading) {
         return <div className={'loadingDiv'}>
-            <img src={'idea.png'} className="ideaLoading">
+            <img alt={'logo'} src={'idea.png'} className="ideaLoading">
             </img>
             <p style={{marginTop: '20px'}}>
                 IDEA: Northeastern University's Venture Accelerator
@@ -109,7 +104,7 @@ function App() {
                                     <>
                                         <NavHeaderEx collapsed={collapsed}/>
                                         <div className={sidebarStyles.container}>
-                                            <NavContentEx select={navSelect}/>}
+                                            <NavContentEx select={0}/>}
                                         </div>
                                         <CollapseBtn className={sidebarStyles.collapseBtn}>
                                             <CollapseIcon/>

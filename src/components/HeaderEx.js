@@ -1,13 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {withStyles} from "@material-ui/core/styles";
-import {isWidthUp} from "@material-ui/core/withWidth";
 import Icon from "@material-ui/core/Icon";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
 import {useAuth0} from "../auth/react-auth0-spa";
-import {Link} from "react-router-dom";
 import {AccountCircle} from "@material-ui/icons";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -70,7 +68,7 @@ const styles = ({spacing, transitions, breakpoints, palette, shape}) => ({
 
 function HeaderEx(props) {
     const {classes} = props;
-    const {isAuthenticated, logout} = useAuth0();
+    const {logout} = useAuth0();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 

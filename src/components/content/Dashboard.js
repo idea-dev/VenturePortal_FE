@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../style/styles.css";
 import {makeStyles} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import Switch from "../Switch";
 import VentureStage from "../VentureStage";
-import UpcomingEvents from "../UpcomingEvents";
+// import UpcomingEvents from "../UpcomingEvents";
 
 
 const useStyles = makeStyles(theme => ({
@@ -73,7 +73,7 @@ export default function Dashboard(props) {
                 {"Upcoming Events"}
             </Typography>
             <div className={classes.centerContainer}>
-                <UpcomingEvents />
+                {/*<UpcomingEvents />*/}
             </div>
             <br/>
             <br/>

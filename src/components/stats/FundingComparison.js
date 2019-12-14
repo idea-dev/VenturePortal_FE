@@ -3,7 +3,7 @@ import * as recharts from "recharts";
 
 export default function FundingComparison() {
 
-    const {ResponsiveContainer, ScatterChart, Scatter, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend} = recharts;
+    const {ResponsiveContainer, ScatterChart, Scatter, Cell, XAxis, YAxis, CartesianGrid, Tooltip} = recharts;
     const data = [{x: 100, y: 200, z: 200}, {x: 120, y: 100, z: 260},
         {x: 170, y: 300, z: 400}, {x: 140, y: 250, z: 280},
         {x: 150, y: 400, z: 500}, {x: 110, y: 280, z: 200}];
