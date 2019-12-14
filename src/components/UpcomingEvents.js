@@ -7,12 +7,12 @@ export default class UpcomingEvents extends React.Component {
 
     constructor(props) {
         super(props);
-        if (ApiCalendar.sign)
-            ApiCalendar.listUpcomingEvents(10)
-                .then(({result}: any) => {
-                    console.log(result);
-                    this.upcomingEvents = result.items;
-                });
+        // if (ApiCalendar.sign)
+        //     ApiCalendar.listUpcomingEvents(10)
+        //         .then(({result}: any) => {
+        //             console.log(result);
+        //             this.upcomingEvents = result.items;
+        //         });
     }
 
     render() {

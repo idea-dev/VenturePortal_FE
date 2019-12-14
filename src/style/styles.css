@@ -266,4 +266,6 @@ svg {
     to { transform: rotateY(360deg); }
 }
 
-
+.footer {
+    margin-top: 100vh;
+}

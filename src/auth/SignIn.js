@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import "./style/styles.css";
-import {useAuth0} from "./components/react-auth0-spa";
+import "../style/styles.css";
+import {useAuth0} from "./react-auth0-spa";
 import {Link} from "react-router-dom";
 
 

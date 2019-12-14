@@ -1,10 +1,11 @@
-/* eslint-disable */
-import React, {useState} from "react";
-import {makeStyles, withStyles} from "@material-ui/core/styles";
+import React, { useState } from "react";
+import "../../style/styles.css";
+import {makeStyles} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import Switch from "./Switch";
-import UpcomingEvents from "./UpcomingEvents";
-import VentureStage from "./VentureStage";
+import Switch from "../Switch";
+import VentureStage from "../VentureStage";
+import UpcomingEvents from "../UpcomingEvents";
+
 
 const useStyles = makeStyles(theme => ({
     navbar: {
@@ -33,13 +34,8 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-
-export default function ContentEx(props) {
+export default function Dashboard(props) {
     const classes = useStyles();
-
-    const [value, setValue] = useState(false);
-
-
     return (
         <div className={classes.root}>
             <Typography gutterBottom>
@@ -70,14 +66,6 @@ export default function ContentEx(props) {
 
                 <br/>
             </Typography>
-            {/*<div style={{position: 'relative', height: '40px'}}>*/}
-            {/*    <div>*/}
-            {/*        Progress*/}
-            {/*    </div>*/}
-            {/*    <div style={{height: '150px', width: '150px'}}>*/}
-            {/*        <ProgressStatistics/>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
             <br/>
             <br/>
             <br/>
@@ -93,7 +81,6 @@ export default function ContentEx(props) {
             <br/>
             <br/>
             <br/>
-
         </div>
-    )
-};
+    );
+}

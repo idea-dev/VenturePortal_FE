@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import {Auth0Provider} from "./components/react-auth0-spa";
-import config from "./auth_config.json";
+import {Auth0Provider} from "./auth/react-auth0-spa";
+import config from "./auth/auth_config.json";
 import history from "./utils/history";
 
 // A function that routes the user to the right place

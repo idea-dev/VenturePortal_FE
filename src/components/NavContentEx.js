@@ -52,8 +52,8 @@ export default class NavContentEx extends React.Component {
         return (
             <List>
                 {list.map(({primaryText, icon, path}, i) => (
-                    <ListItem component={Link} to={path} key={primaryText}
-                              selected={i === this.select}
+                    <ListItem onClick={() => {this.forceUpdate()}} component={Link} to={path} key={primaryText}
+                              selected={window.location.pathname === path}
                               button>
                         <ListItemIcon>
                             <Icon>{icon}</Icon>

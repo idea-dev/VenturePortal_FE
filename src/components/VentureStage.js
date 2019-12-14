@@ -1,9 +1,5 @@
 import * as React from "react";
-import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import List from "@material-ui/core/List";
-import {makeStyles} from "@material-ui/core";
-
 
 const list = [
     {
@@ -17,10 +13,6 @@ const list = [
     },
     {
         primaryText: "Go",
-        color: "work",
-    },
-    {
-        primaryText: "Launched",
         color: "work",
     },
 ];

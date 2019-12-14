@@ -6,7 +6,7 @@ import Icon from "@material-ui/core/Icon";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
-import {useAuth0} from "./react-auth0-spa";
+import {useAuth0} from "../auth/react-auth0-spa";
 import {Link} from "react-router-dom";
 import {AccountCircle} from "@material-ui/icons";
 import Menu from "@material-ui/core/Menu";
