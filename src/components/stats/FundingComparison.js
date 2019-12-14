@@ -1,9 +1,5 @@
 import React from 'react';
 import * as recharts from "recharts";
-import XAxis from "recharts/es6/cartesian/XAxis";
-import YAxis from "recharts/es6/cartesian/YAxis";
-import CartesianGrid from "recharts/es6/cartesian/CartesianGrid";
-import Tooltip from "@material-ui/core/Tooltip";
 
 export default function FundingComparison() {
 
@@ -15,7 +11,7 @@ export default function FundingComparison() {
 
     return (
         <ResponsiveContainer>
-            <ScatterChart>
+            <ScatterChart margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                 <XAxis type="number" dataKey={'x'} name='stature' unit='cm'/>
                 <YAxis type="number" dataKey={'y'} name='weight' unit='kg'/>
                 <CartesianGrid />

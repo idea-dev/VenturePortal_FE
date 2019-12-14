@@ -106,13 +106,105 @@ export default function Operations(props) {
                                 <div className={"operations-container"}>
 
                                     <Typography className={'operationHeader'} weight={"bold"} variant={"h6"}
-                                                gutterBottom>Funding</Typography>
+                                                gutterBottom>Venture Functions</Typography>
                                     <div className={'operationSection'}>
                                         <Grid container
                                               direction="row"
                                               justify="center"
                                               alignItems="center">
-                                            <Grid container item justify="center" xs={6}>
+                                            <Grid container item justify="center" xs={2}>
+                                                <Grow in={true}
+                                                      style={{transformOrigin: '0 0 0'}}
+                                                      {...{timeout: 1000}}>
+                                                    <Box boxShadow={3} className={'operation'}>
+
+                                                        <Link to="">
+                                                            <div>
+                                                                <RecordVoiceOverIcon className={'op-icon'}/>
+                                                            </div>
+                                                            <div className={'operationName'}>
+                                                                Connection Request
+                                                            </div>
+                                                        </Link>
+                                                    </Box>
+                                                </Grow>
+                                            </Grid>
+                                            <Grid container item justify="center" xs={2}>
+                                                <Grow in={true}
+                                                      style={{transformOrigin: '0 0 0'}}
+                                                      {...{timeout: 2000}}>
+                                                    <Box boxShadow={3} className={'operation'}>
+
+                                                        <Link to="">
+                                                            <div>
+                                                                <SupervisedUserCircleIcon className={'op-icon'}/>
+                                                            </div>
+                                                            <div className={'operationName'}>
+                                                                Co-Founder Match
+                                                            </div>
+                                                        </Link>
+                                                    </Box>
+                                                </Grow>
+                                            </Grid>
+                                            <Grid container item justify="center" xs={2}>
+                                                <Grow in={true}
+                                                      style={{transformOrigin: '0 0 0'}}
+                                                      {...{timeout: 3000}}>
+                                                    <Box boxShadow={3} className={'operation'}>
+
+                                                        <Link to="">
+                                                            <div>
+                                                                <BusinessCenterIcon className={'op-icon'}/>
+                                                            </div>
+                                                            <div className={'operationName'}>
+                                                                Legal Help
+                                                            </div>
+                                                        </Link>
+                                                    </Box>
+                                                </Grow>
+                                            </Grid>
+                                            <Grid container item justify="center" xs={2}>
+                                                <Grow in={true}
+                                                      style={{transformOrigin: '0 0 0'}}
+                                                      {...{timeout: 4000}}>
+                                                    <Box boxShadow={3} className={'operation'}>
+                                                        <Link to="">
+                                                            <div>
+                                                                <Icon className={'op-icon'}>add</Icon>
+                                                            </div>
+                                                            <div className={'operationName'}>
+                                                                Milestone Update
+                                                            </div>
+                                                        </Link>
+                                                    </Box>
+                                                </Grow>
+                                            </Grid>
+                                            <Grid container item justify="center" xs={2}>
+                                                <Grow in={true}
+                                                      style={{transformOrigin: '0 0 0'}}
+                                                      {...{timeout: 5000}}>
+                                                    <Box boxShadow={3} className={'operation'}>
+                                                        <Link to="">
+                                                            <div>
+                                                                <EmojiPeopleIcon className={'op-icon'}/>
+                                                            </div>
+                                                            <div className={'operationName'}>
+                                                                Peer Mentor Search
+                                                            </div>
+                                                        </Link>
+                                                    </Box>
+                                                </Grow>
+                                            </Grid>
+                                        </Grid>
+                                    </div>
+                                    <Typography className={'operationHeader'} weight={"bold"} variant={"h6"}
+                                                gutterBottom>Applications</Typography>
+                                    <div className={'operationSection'}>
+                                        <Grid container
+                                              direction="row"
+                                              justify="center"
+                                              alignItems="center">
+                                            <Grid container item justify="center" xs={4}>
                                                 <Grow in={true}
                                                       style={{transformOrigin: '0 0 0'}}
                                                       {...{timeout: 1000}}>
@@ -129,7 +221,7 @@ export default function Operations(props) {
                                                     </Box>
                                                 </Grow>
                                             </Grid>
-                                            <Grid container item justify="center" xs={6}>
+                                            <Grid container item justify="center" xs={4}>
                                                 <Grow in={true}
                                                       style={{transformOrigin: '0 0 0'}}
                                                       {...{timeout: 2000}}>
@@ -146,99 +238,23 @@ export default function Operations(props) {
                                                     </Box>
                                                 </Grow>
                                             </Grid>
+                                            <Grid container item justify="center" xs={4}>
+                                            <Grow in={true}
+                                                  style={{transformOrigin: '0 0 0'}}
+                                                  {...{timeout: 3000}}>
+                                                <Box boxShadow={3} className={'operation'}>
+
+                                                    <Link to="">
+                                                        <div>
+                                                            <Icon className={'op-icon'}>people</Icon>
+                                                        </div>
+                                                        <div className={'operationName'}>
+                                                            IDEA Management Application
+                                                        </div>
+                                                    </Link>
+                                                </Box>
+                                            </Grow>
                                         </Grid>
-                                    </div>
-                                    <Typography className={'operationHeader'} weight={"bold"} variant={"h6"}
-                                                gutterBottom>Venture Functions</Typography>
-                                    <div className={'operationSection'}>
-                                        <Grid container
-                                              direction="row"
-                                              justify="center"
-                                              alignItems="center">
-                                            <Grid container item justify="center" xs={2}>
-                                                <Grow in={true}
-                                                      style={{transformOrigin: '0 0 0'}}
-                                                      {...{timeout: 1000}}>
-                                                    <Box boxShadow={3} className={'operation'}>
-
-                                                        <Link to="">
-                                                            <div>
-                                                                <RecordVoiceOverIcon className={'op-icon'} />
-                                                            </div>
-                                                            <div className={'operationName'}>
-                                                                Connection Request
-                                                            </div>
-                                                        </Link>
-                                                    </Box>
-                                                </Grow>
-                                            </Grid>
-                                            <Grid container item justify="center" xs={2}>
-                                                <Grow in={true}
-                                                      style={{transformOrigin: '0 0 0'}}
-                                                      {...{timeout: 1000}}>
-                                                    <Box boxShadow={3} className={'operation'}>
-
-                                                        <Link to="">
-                                                            <div>
-                                                                <SupervisedUserCircleIcon className={'op-icon'} />
-                                                            </div>
-                                                            <div className={'operationName'}>
-                                                                Co-Founder Match
-                                                            </div>
-                                                        </Link>
-                                                    </Box>
-                                                </Grow>
-                                            </Grid>
-                                            <Grid container item justify="center" xs={2}>
-                                                <Grow in={true}
-                                                      style={{transformOrigin: '0 0 0'}}
-                                                      {...{timeout: 1000}}>
-                                                    <Box boxShadow={3} className={'operation'}>
-
-                                                        <Link to="">
-                                                            <div>
-                                                                <BusinessCenterIcon className={'op-icon'} />
-                                                            </div>
-                                                            <div className={'operationName'}>
-                                                                Legal Help
-                                                            </div>
-                                                        </Link>
-                                                    </Box>
-                                                </Grow>
-                                            </Grid>
-                                            <Grid container item justify="center" xs={2}>
-                                                <Grow in={true}
-                                                      style={{transformOrigin: '0 0 0'}}
-                                                      {...{timeout: 2000}}>
-                                                    <Box boxShadow={3} className={'operation'}>
-
-                                                        <Link to="">
-                                                            <div>
-                                                                <Icon className={'op-icon'}>add</Icon>
-                                                            </div>
-                                                            <div className={'operationName'}>
-                                                                Milestone Update
-                                                            </div>
-                                                        </Link>
-                                                    </Box>
-                                                </Grow>
-                                            </Grid>
-                                            <Grid container item justify="center" xs={2}>
-                                                <Grow in={true}
-                                                      style={{transformOrigin: '0 0 0'}}
-                                                      {...{timeout: 3000}}>
-                                                    <Box boxShadow={3} className={'operation'}>
-                                                        <Link to="">
-                                                            <div>
-                                                                <EmojiPeopleIcon className={'op-icon'}/>
-                                                            </div>
-                                                            <div className={'operationName'}>
-                                                                Peer Mentor Search
-                                                            </div>
-                                                        </Link>
-                                                    </Box>
-                                                </Grow>
-                                            </Grid>
                                         </Grid>
                                     </div>
                                     <Typography className={'operationHeader'} weight={"bold"} variant={"h6"}

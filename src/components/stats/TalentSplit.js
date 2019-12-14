@@ -1,9 +1,5 @@
 import React from 'react';
 import * as recharts from "recharts";
-import XAxis from "recharts/es6/cartesian/XAxis";
-import YAxis from "recharts/es6/cartesian/YAxis";
-import CartesianGrid from "recharts/es6/cartesian/CartesianGrid";
-import Tooltip from "@material-ui/core/Tooltip";
 
 export default function TalentSplit() {
 
@@ -16,18 +12,18 @@ export default function TalentSplit() {
         {name: '35-39', uv: 8.22, pv: 9800, fill: '#82ca9d'},
         {name: '40-49', uv: 8.63, pv: 3908, fill: '#a4de6c'},
         {name: '50+', uv: 2.63, pv: 4800, fill: '#d0ed57'},
-        {name: 'unknow', uv: 6.67, pv: 4800, fill: '#ffc658'}
+        {name: 'unknown', uv: 6.67, pv: 4800, fill: '#ffc658'}
     ];
 
     const style = {
         top: 0,
-        left: '250px',
+        left: '240px',
         lineHeight: '24px'
     };
 
     return (
         <ResponsiveContainer>
-            <RadialBarChart innerRadius={20} outerRadius={80} barSize={10} data={data}>
+            <RadialBarChart margin={{ top: 5, right: 30, left: 20, bottom: 5 }}innerRadius={20} outerRadius={80} barSize={10} data={data}>
                 <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise={true} dataKey='uv'/>
                 <Legend iconSize={10} width={120} height={140} layout='vertical' verticalAlign='middle' wrapperStyle={style}/>
             </RadialBarChart>

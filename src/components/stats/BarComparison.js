@@ -1,9 +1,5 @@
 import React from 'react';
 import * as recharts from "recharts";
-import XAxis from "recharts/es6/cartesian/XAxis";
-import YAxis from "recharts/es6/cartesian/YAxis";
-import CartesianGrid from "recharts/es6/cartesian/CartesianGrid";
-import Tooltip from "@material-ui/core/Tooltip";
 
 export default function BarComparison() {
 
@@ -20,7 +16,7 @@ export default function BarComparison() {
 
     return (
         <ResponsiveContainer>
-            <BarChart data={data}>
+            <BarChart margin={{ top: 5, right: 30, left: 20, bottom: 5 }} data={data}>
                 <CartesianGrid strokeDasharray="3 3"/>
                 <XAxis dataKey="name"/>
                 <YAxis/>

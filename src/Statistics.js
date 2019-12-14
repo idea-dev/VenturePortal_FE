@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import Switch from '@material-ui/core/Switch';
-import Paper from '@material-ui/core/Paper';
 import Grow from '@material-ui/core/Grow';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -12,7 +9,6 @@ import {
     Header,
     Sidebar,
     Content,
-    Footer,
     CollapseBtn,
     CollapseIcon,
     SidebarTrigger,
@@ -30,9 +26,6 @@ import {
 import NavContentEx from "./components/NavContentEx";
 import NavHeaderEx from "./components/NavHeaderEx";
 import HeaderEx from "./components/HeaderEx";
-import ContentEx from "./components/ContentEx";
-import FooterEx from "./components/FooterEx";
-
 import "./style/styles.css";
 import ProgressStatistics from "./components/stats/ProgressStatistics";
 import RadarStatistics from "./components/stats/RadarStatistics";
@@ -143,7 +136,7 @@ export default function Statistics(props) {
                                             {...{timeout: 2000}}
                                         >
                                             <Box boxShadow={3} className={'stat'}>
-                                                <BarComparison />
+                                                <BarComparison/>
                                             </Box>
                                         </Grow>
                                     </Grid>
@@ -172,7 +165,6 @@ export default function Statistics(props) {
                                         </Grow>
                                     </Grid>
                                     <Grid container item justify="center" xs={6}>
-
                                         <Grow
                                             in={true}
                                             style={{transformOrigin: '0 0 0'}}
@@ -184,18 +176,16 @@ export default function Statistics(props) {
                                         </Grow>
                                     </Grid>
                                     <Grid container item justify="center" xs={6}>
-
                                         <Grow
                                             in={true}
                                             style={{transformOrigin: '0 0 0'}}
                                             {...{timeout: 6000}}
                                         >
                                             <Box boxShadow={3} className={'stat'}>
-                                                <TalentSplit />
+                                                <TalentSplit/>
                                             </Box>
                                         </Grow>
                                     </Grid>
-
                                 </Grid>
                             </div>
                         </div>

@@ -1,58 +1,31 @@
-import React, {useState} from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useRouteMatch,
-    useParams
-} from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import {Auth0Provider} from "./components/react-auth0-spa";
+import config from "./auth_config.json";
+import history from "./utils/history";
 
-
-import "./style/styles.css";
-import SignIn from "./SignIn";
-import Dashboard from "./Dashboard";
-import SignUp from "./SignUp";
-import Typography from "@material-ui/core/Typography";
-import * as ReactDOM from "react-dom";
-import Statistics from "./Statistics";
-import Operations from "./Operations";
-import Events from "./Events";
-import Resources from "./Resources";
-
-// add presets.create{}() to config props in Root to change the behavior, looking and layout
-// <Root config={presets.createCozyLayout()}> ...
-function App() {
-    const [loading, setLoading] = useState(false);
-
-    return loading ? (
-        <div
-            style={{
-                height: "100vh",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-            }}
-        >
-            <Typography variant={"h2"}>Changing Preset...</Typography>
-        </div>
-    ) : (
-        <Router>
-            <Switch>
-                <Route path="/" exact component={SignIn}/>
-                <Route path="/register" component={SignUp}/>
-                <Route path="/dashboard" component={Dashboard} isPrivate/>
-                <Route path="/resources" component={Resources} isPrivate/>
-                <Route path="/operations" component={Operations} isPrivate/>
-                <Route path="/events" component={Events} isPrivate/>
-                <Route path="/statistics" component={Statistics} isPrivate/>
-                <Route path="/files" component={Dashboard} isPrivate/>
-                {/* redirect user to SignIn page if route does not exist and user is not authenticated */}
-                <Route component={SignIn}/>
-            </Switch>
-        </Router>
+// A function that routes the user to the right place
+// after login
+const onRedirectCallback = appState => {
+    history.push(
+        appState && appState.targetUrl
+            ? appState.targetUrl
+            : window.location.pathname
     );
-}
+};
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App/>, rootElement);
+ReactDOM.render(
+    <Auth0Provider
+        domain={config.domain}
+        client_id={config.clientId}
+        redirect_uri={window.location.origin}
+        onRedirectCallback={onRedirectCallback}
+    >
+        <App/>
+    </Auth0Provider>,
+    document.getElementById("root")
+);
+
+serviceWorker.unregister();

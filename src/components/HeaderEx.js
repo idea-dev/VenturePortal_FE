@@ -6,6 +6,12 @@ import Icon from "@material-ui/core/Icon";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
+import {useAuth0} from "./react-auth0-spa";
+import {Link} from "react-router-dom";
+import {AccountCircle} from "@material-ui/icons";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+
 
 const styles = ({spacing, transitions, breakpoints, palette, shape}) => ({
     header: {
@@ -61,61 +67,74 @@ const styles = ({spacing, transitions, breakpoints, palette, shape}) => ({
     }
 });
 
-const HeaderEx = ({classes, screen}) => (
-    <>
-        <Typography noWrap color={"textSecondary"} className={classes.header}>
-            Venture Portal
-        </Typography>
-        <div className={classes.grow}/>
-        <div className={classes.search}>
-            <div className={classes.searchIcon}>
-                <Icon>search</Icon>
+
+function HeaderEx(props) {
+    const {classes} = props;
+    const {isAuthenticated, logout} = useAuth0();
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+
+    const handleMenu = event => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    return (<>
+            <Typography noWrap color={"textSecondary"} className={classes.header}>
+                Venture Portal
+            </Typography>
+            <div className={classes.grow}/>
+            <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                    <Icon>search</Icon>
+                </div>
+                <InputBase
+                    placeholder="Search…"
+                    classes={{
+                        root: classes.inputRoot,
+                        input: classes.inputInput
+                    }}
+                />
             </div>
-            <InputBase
-                placeholder="Search…"
-                classes={{
-                    root: classes.inputRoot,
-                    input: classes.inputInput
-                }}
-            />
-        </div>
-        {screen === "xs" && (
-            <IconButton>
-                <Icon>more_vert</Icon>
-            </IconButton>
-        )}
-        {screen === "sm" && (
-            <>
-                <IconButton>
-                    <Icon>favorite</Icon>
+            <div>
+                <IconButton
+                    aria-label="account of current user"
+                    aria-controls="menu-appbar"
+                    aria-haspopup="true"
+                    onClick={handleMenu}
+                    color="inherit"
+                >
+                    <AccountCircle/>
                 </IconButton>
-                <IconButton>
-                    <Icon>more_vert</Icon>
-                </IconButton>
-            </>
-        )}
-        {isWidthUp("md", screen) && (
-            <>
-                <IconButton>
-                    <Icon>favorite</Icon>
-                </IconButton>
-                <IconButton>
-                    <Icon>phone</Icon>
-                </IconButton>
-                <IconButton>
-                    <Icon>camera</Icon>
-                </IconButton>
-            </>
-        )}
-    </>
-);
+                <Menu
+                    id="menu-appbar"
+                    anchorEl={anchorEl}
+                    anchorOrigin={{
+                        vertical: 'top',
+                        horizontal: 'right',
+                    }}
+                    keepMounted
+                    transformOrigin={{
+                        vertical: 'top',
+                        horizontal: 'right',
+                    }}
+                    open={open}
+                    onClose={handleClose}
+                >
+                    <MenuItem onClick={() => logout()}>Logout</MenuItem>
+                </Menu>
+            </div>
+        </>
+    )
+}
 
 HeaderEx.propTypes = {
-    screen: PropTypes.string,
-    classes: PropTypes.shape({}).isRequired
-};
-HeaderEx.defaultProps = {
-    screen: null
+    children: PropTypes.node,
+    classes: PropTypes.object.isRequired,
+    className: PropTypes.string,
 };
 
 export default withStyles(styles)(HeaderEx);

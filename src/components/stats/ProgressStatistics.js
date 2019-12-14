@@ -1,15 +1,9 @@
 import React from 'react';
 import * as recharts from "recharts";
-import Box from "@material-ui/core/Box";
-import XAxis from "recharts/es6/cartesian/XAxis";
-import YAxis from "recharts/es6/cartesian/YAxis";
-import CartesianGrid from "recharts/es6/cartesian/CartesianGrid";
-import Tooltip from "@material-ui/core/Tooltip";
-import Legend from "recharts/es6/component/Legend";
 
 export default function ProgressStatistics() {
 
-    const {ResponsiveContainer, LineChart, Line} = recharts;
+    const {ResponsiveContainer, YAxis, XAxis, CartesianGrid, Tooltip, Legend, LineChart, Line} = recharts;
     const data = [
         {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
         {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
@@ -27,7 +21,7 @@ export default function ProgressStatistics() {
 
     return (
         <ResponsiveContainer>
-            <LineChart data={data}>
+            <LineChart margin={{ top: 5, right: 30, left: 20, bottom: 5 }} data={data}>
                 <XAxis dataKey="name"/>
                 <YAxis/>
                 <CartesianGrid strokeDasharray="3 3"/>

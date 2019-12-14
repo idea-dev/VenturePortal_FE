@@ -1,14 +1,9 @@
 import React from 'react';
 import * as recharts from "recharts";
-import RadarChart from "recharts/es6/chart/RadarChart";
-import PolarAngleAxis from "recharts/es6/polar/PolarAngleAxis";
-import PolarGrid from "recharts/es6/polar/PolarGrid";
-import PolarRadiusAxis from "recharts/es6/polar/PolarRadiusAxis";
-import Radar from "recharts/es6/polar/Radar";
 
 export default function RadarStatistics() {
 
-    const {ResponsiveContainer} = recharts;
+    const {ResponsiveContainer, RadarChart, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar} = recharts;
 
     const data = [
         {subject: 'Pitch', A: 120, B: 110, fullMark: 150},

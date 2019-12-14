@@ -31,8 +31,6 @@ import FooterEx from "./components/FooterEx";
 
 import "./style/styles.css";
 import {makeStyles} from "@material-ui/core";
-import Switch from "./components/Switch";
-
 const presets = {
     createDefaultLayout: defaultLayoutPreset,
     createStandardLayout: standardLayoutPreset,
