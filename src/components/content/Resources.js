@@ -5,12 +5,12 @@ import "../../style/styles.css";
 import Grid from "@material-ui/core/Grid";
 import {Link} from "react-router-dom";
 import Box from "@material-ui/core/Box";
-
+import Typography from "@material-ui/core/Typography";
 
 
 const useStyles = makeStyles(theme => ({
     root: {
-        height: 180,
+        height: '70vh',
     },
     container: {
         display: 'flex',
@@ -34,6 +34,15 @@ export default function Resources(props) {
     const classes = useStyles();
     return (
         <div className={classes.root}>
+            <br/>
+            <br/>
+            <Typography weight={"bold"} variant={"h5"} gutterBottom>
+                {"Resources"}
+            </Typography>
+            <Typography gutterBottom>
+                Utilize the resources below to further your venture.
+                <br/>
+            </Typography>
             <div className={"resourcesContainer"}>
                 <Grid container
                       direction="row"

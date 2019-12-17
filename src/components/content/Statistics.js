@@ -10,11 +10,12 @@ import FundingComparison from "../stats/FundingComparison";
 import TalentSplit from "../stats/TalentSplit";
 import BarComparison from "../stats/BarComparison";
 import CharWithDomain from "../stats/CharWithDomain";
+import Typography from "@material-ui/core/Typography";
 
 
 const useStyles = makeStyles(theme => ({
     root: {
-        height: 180,
+        height: '110vh',
     },
     container: {
         display: 'flex',
@@ -38,6 +39,15 @@ export default function Statistics(props) {
     const gridSize = 4;
     return (
         <div className={classes.root}>
+            <br/>
+            <br/>
+            <Typography weight={"bold"} variant={"h5"} gutterBottom>
+                {"Venture Statistics"}
+            </Typography>
+            <Typography gutterBottom>
+                See statistics about your venture below.
+                <br/>
+            </Typography>
             <div className={classes.container}>
                 <Grid container
                       direction="row"

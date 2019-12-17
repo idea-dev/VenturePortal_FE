@@ -9,6 +9,8 @@ import {useAuth0} from "../auth/react-auth0-spa";
 import {AccountCircle} from "@material-ui/icons";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import {Link} from "react-router-dom";
+import ListItem from "@material-ui/core/ListItem";
 
 
 const styles = ({spacing, transitions, breakpoints, palette, shape}) => ({
@@ -122,6 +124,7 @@ function HeaderEx(props) {
                     open={open}
                     onClose={handleClose}
                 >
+                    <MenuItem component={Link} to={'/profile'}>Profile</MenuItem>
                     <MenuItem onClick={() => logout()}>Logout</MenuItem>
                 </Menu>
             </div>

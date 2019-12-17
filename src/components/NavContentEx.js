@@ -65,12 +65,14 @@ export default class NavContentEx extends React.Component {
                     </ListItem>
                 ))}
                 <Divider style={{margin: "12px 0"}}/>
-                <ListItem button>
+                <ListItem onClick={() => {this.forceUpdate()}} component={Link} to={'/settings'}
+                          selected={window.location.pathname === '/settings'}
+                          button>
                     <ListItemIcon>
                         <Icon>settings</Icon>
                     </ListItemIcon>
                     <ListItemText
-                        primary={"Settings & account"}
+                        primary={"Settings"}
                         primaryTypographyProps={{noWrap: true}}
                     />
                 </ListItem>

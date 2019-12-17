@@ -116,6 +116,7 @@ input[type=file] {
     padding: 75px 7% 7%;
     width: 100%;
     margin: -40px 0 0;
+    position: relative;
 }
 
 .operationName {
@@ -145,6 +146,7 @@ input[type=file] {
     margin-top: 30px;
     font-size: 14px !important;
     color: #212121;
+    text-align: left;
 }
 
 * {
@@ -267,5 +269,36 @@ svg {
 }
 
 .footer {
-    margin-top: 100vh;
+    /*margin-top: 100vh;*/
+}
+
+.iframeStyle {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 150px;
+    height: 200px;
+}
+
+.fileContainer {
+    padding: 1%;
+}
+
+.container {
+    margin: 5%;
+}
+
+.file {
+    margin: 20px;
+}
+
+.founders {
+    list-style: none;
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+
+.founders li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5%;
 }

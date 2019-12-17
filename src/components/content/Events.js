@@ -34,8 +34,13 @@ export default function Dashboard(props) {
 
     return (
         <div className={classes.root}>
+            <br/>
             <Typography weight={"bold"} variant={"h5"} gutterBottom>
-                {"IDEA Events"}
+                {"Events"}
+            </Typography>
+            <Typography gutterBottom>
+                See upcoming events and integrate with the community.
+                <br/>
             </Typography>
             <br/>
             <br/>

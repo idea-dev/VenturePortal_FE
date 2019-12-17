@@ -36,6 +36,9 @@ import {
     cozyLayoutPreset,
     muiTreasuryPreset
 } from "@mui-treasury/layout/presets";
+import Files from "./components/content/Files";
+import Profile from "./components/content/Profile";
+import Settings from "./components/content/Settings";
 
 const presets = {
     createDefaultLayout: defaultLayoutPreset,
@@ -89,13 +92,14 @@ function App() {
                                 )}
                                 <Switch>
                                     <PrivateRoute path="/registration" component={Dashboard}/>
-                                    <PrivateRoute path="/file" component={Dashboard}/>
+                                    <PrivateRoute path="/files" component={Files}/>
                                     <PrivateRoute path="/statistics" component={Statistics}/>
                                     <PrivateRoute path="/operations" component={Operations}/>
                                     <PrivateRoute path="/resources" component={Resources}/>
                                     <PrivateRoute path="/events" component={Events}/>
-                                    <PrivateRoute path="/settings" component={Dashboard}/>
+                                    <PrivateRoute path="/settings" component={Settings}/>
                                     <PrivateRoute path="/dashboard" component={Dashboard}/>
+                                    <PrivateRoute path="/profile" component={Profile}/>
                                     <PrivateRoute path="/" exact component={Dashboard}/>
                                 </Switch>
                             </Content>
@@ -104,7 +108,7 @@ function App() {
                                     <>
                                         <NavHeaderEx collapsed={collapsed}/>
                                         <div className={sidebarStyles.container}>
-                                            <NavContentEx select={0}/>}
+                                            <NavContentEx select={0}/>
                                         </div>
                                         <CollapseBtn className={sidebarStyles.collapseBtn}>
                                             <CollapseIcon/>
@@ -113,7 +117,7 @@ function App() {
                                 )}
                             </Sidebar>
                             <Footer className={'footer'}><br/>
-                            <FooterEx/>
+                                <FooterEx/>
                             </Footer>
                         </>
                     )}
