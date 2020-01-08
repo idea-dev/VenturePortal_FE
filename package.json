@@ -11,18 +11,20 @@
     "@testing-library/react": "^9.3.3",
     "@testing-library/user-event": "^7.1.2",
     "@trendmicro/react-sidenav": "^0.4.5",
+    "axios": "^0.19.1",
     "history": "latest",
     "material-ui": "^1.0.0-beta.47",
     "prop-types": "latest",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
+    "react-confirm-alert": "latest",
     "react-dom": "^16.12.0",
     "react-dropzone": "^10.2.1",
     "react-google-calendar-api": "^1.0.11",
+    "react-router": "latest",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
-    "recharts": "^2.0.0-beta.1",
-    "react-confirm-alert": "latest"
+    "recharts": "^2.0.0-beta.1"
   },
   "scripts": {
     "start": "react-scripts start",
