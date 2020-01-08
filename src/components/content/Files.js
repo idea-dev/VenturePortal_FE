@@ -3,7 +3,7 @@ import "../../style/styles.css";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Grow from "@material-ui/core/Grow";
-import FileDropzone from "../FileDropzone";
+import FileDropzone from "../subcomp/FileDropzone";
 
 const exampleList = [
     {

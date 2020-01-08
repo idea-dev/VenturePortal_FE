@@ -2,8 +2,8 @@ import React from "react";
 import "../../style/styles.css";
 import {makeStyles} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import Switch from "../Switch";
-import VentureStage from "../VentureStage";
+import Switch from "../subcomp/Switch";
+import VentureStage from "../subcomp/VentureStage";
 // import UpcomingEvents from "../UpcomingEvents";
 
 
